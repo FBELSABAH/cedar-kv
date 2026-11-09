@@ -1,0 +1,18 @@
+{
+  "platform": "macOS-15.7.4-arm64-arm-64bit-Mach-O",
+  "method": "1000 sequential localhost requests per phase; SET includes fsync; client overhead included; one run, not production capacity",
+  "SET": {
+    "operations": 1000,
+    "seconds": 0.0444,
+    "ops_per_second": 22532.0,
+    "p50_ms": 0.0364,
+    "p95_ms": 0.0672
+  },
+  "GET": {
+    "operations": 1000,
+    "seconds": 0.0352,
+    "ops_per_second": 28416.4,
+    "p50_ms": 0.0355,
+    "p95_ms": 0.0403
+  }
+}
