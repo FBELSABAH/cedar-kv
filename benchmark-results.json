@@ -3,16 +3,16 @@
   "method": "1000 sequential localhost requests per phase; SET includes fsync; client overhead included; one run, not production capacity",
   "SET": {
     "operations": 1000,
-    "seconds": 0.0444,
-    "ops_per_second": 22532.0,
-    "p50_ms": 0.0364,
-    "p95_ms": 0.0672
+    "seconds": 0.0386,
+    "ops_per_second": 25917.5,
+    "p50_ms": 0.0357,
+    "p95_ms": 0.0558
   },
   "GET": {
     "operations": 1000,
-    "seconds": 0.0352,
-    "ops_per_second": 28416.4,
-    "p50_ms": 0.0355,
-    "p95_ms": 0.0403
+    "seconds": 0.0354,
+    "ops_per_second": 28264.0,
+    "p50_ms": 0.0352,
+    "p95_ms": 0.0415
   }
 }
