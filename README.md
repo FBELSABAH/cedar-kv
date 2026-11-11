@@ -1,10 +1,10 @@
 # Cedar KV
 
-A small persistent key-value TCP server in C11. An educational systems project developed with AI assistance on November 9, 2026. The initial implementation and automated checks were produced by Codex; this repository is not evidence that its owner has independently mastered C.
+Cedar KV is a single-client TCP server written in C11. It records each write in an append-only journal before acknowledging it, then replays the journal on restart. This is an AI-assisted learning project. Codex produced the initial implementation and automated checks in November 2026.
 
 ## Run
 
-Requires a POSIX system (tested on macOS), a C compiler, Make, and Python 3 for tests/benchmarks. Linux portability is intended but has not been tested.
+Requires a POSIX system, a C compiler, Make, and Python 3 for the client, tests, and benchmark. Development took place on macOS. The [Ubuntu CI workflow](.github/workflows/test.yml) runs the integration suite with both the ordinary and sanitized builds.
 
 ```
 make
@@ -75,7 +75,7 @@ AddressSanitizer and UndefinedBehaviorSanitizer are run against the same suite. 
 - No record checksum: syntactically valid corruption is not detected. Keep a test database rather than valuable data.
 - C is used for the server; Python is used only for the client, tests and benchmark.
 
-## Make it your own before claiming hands-on experience
+## Walk through a write and a restart
 
 1. Build it and run SET/GET/DELETE yourself. Follow a request from `serve` to `mutate` and `slot`.
 2. Explain pointer-to-pointer hash lookup, ownership of allocated strings, and collision chains.
